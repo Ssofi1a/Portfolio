@@ -1,6 +1,22 @@
 import img from '../assets/sof.jpg'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const About = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchdata()
+    }, []);
+
+    const fetchdata = () => {
+        axios.get("http://localhost:8000/about/").then((response) => {
+            setData(response.data);
+        }).catch((error) => {console.log(error);});
+
+    }
+
+    console.log(data)
     return (
             <div id='About' className="lg:px-56 px-10 lg:py-0 py-20 text-left gap-5 lg-text-start flex lg:flex-row flex-col-reverse justify-between lg:gap-28 items-center">
                 <img data-aos="fade-up" src={img} width={390} height={390} className="rounded border-2 p-1 border-green-950 img_glow" alt=""/>
