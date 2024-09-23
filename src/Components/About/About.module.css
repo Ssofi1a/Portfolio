@@ -1,0 +1,101 @@
+/*.aboutContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 28px;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .aboutContainer {
+      padding-left: 56px;
+      padding-right: 56px;
+      flex-direction: row;
+    }
+  }
+  
+  .aboutImage {
+    border-radius: 8px;
+    border: 2px solid #22543d;
+    padding: 1px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .aboutText {
+    height: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .aboutText {
+      align-items: flex-start;
+    }
+  }
+  
+  .aboutHeading {
+    font-size: 62px;
+    text-align: right;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: #1a202c;
+  }
+  
+  .aboutDescription {
+    font-family: serif;
+    font-size: 1.5rem;
+  }
+  
+  .cvButton {
+    border: 2px solid #feb2b2;
+    padding: 16px 32px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .cvButton:hover {
+    background-color: #feb2b2;
+    box-shadow: 0 10px 15px -3px rgba(245, 101, 101, 0.1);
+  }
+*/
+.about_section {
+    display: flex; /* flex */
+    flex-direction: column-reverse; /* flex-col-reverse */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+    text-align: left; /* text-left */
+    gap: 20px; /* gap-5 */
+    padding-left: 0rem; /* px-0 */
+    padding-right: 0rem;
+    padding-top: 5rem; /* py-20 (20 x 0.25rem = 5rem) */
+    padding-bottom: 5rem;
+}
+
+.about_section img {
+    border-radius: 5px; /* rounded */
+    border-width: 2px; /* border-2 */
+    padding: 0.25rem; /* p-1 */
+    border-color: #14532d; /* border-green-950 (dark green) */
+}
+
+@media (min-width: 1024px) { /* lg: refers to the large breakpoint */
+    .about_section {
+        flex-direction: row; /* lg:flex-row */
+        padding-left: 14rem; /* lg:px-56 */
+        padding-right: 14rem;
+        padding-top: 0rem; /* lg:py-0 */
+        padding-bottom: 0rem;
+        gap: 7rem; /* lg:gap-28 */
+        text-align: start; /* lg-text-start */
+    }
+}

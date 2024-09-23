@@ -1,13 +1,14 @@
-import Banner from "./Components/Banner";
-import Nav from "./Components/Nav"
-import About from './Components/About'
-import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
+import Banner from "./Components/Banner/Banner";
+import Nav from "./Components/Nav/Nav";
+import About from './Components/About/About';
+import Skills from "./Components/Skills/Skills";
+import Projects from "./Components/Projects/Projects";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
+import Favourite from "./Components/Favourite/Favourite";
 import { useEffect, useState } from "react";
 import { FallingLines } from 'react-loader-spinner';
-import Favourite from "./Components/Favourite";
+
 
 
 const App = () => {
