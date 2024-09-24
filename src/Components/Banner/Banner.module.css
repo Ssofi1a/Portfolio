@@ -1,0 +1,50 @@
+.text_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.greeting {
+    font-size: 52px;
+    font-weight: 450;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: normal;
+    color: #1f2937;
+    text-transform: uppercase;
+}
+
+.name {
+    color: black;
+    font-size: 24px;
+    text-decoration: underline rgb(272 165 165) double;
+}
+
+.text {
+    font-size:24px;
+    margin-top: 0px;
+    font-family: 'Georgia', serif;
+    padding: 22px;
+    text-align: center;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px;
+    margin-left: 25px;
+    gap: 8px;
+}
+
+.links
+{
+    cursor: pointer;
+    background: transparent;
+    border-radius: 9999px;
+    padding: 8px;
+}
+
+.links:hover {
+    background-color: #fecaca;
+}
