@@ -17,7 +17,7 @@ const Favourite = () => {
             <div data-aos="fade-down" className="mb-12">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Favourite TV-Series</h3>
                 <div className="relative max-w-md mx-auto rounded-lg overflow-hidden shadow-lg border border-gray-300">
-                    <video controls autoPlay className="w-full h-auto">
+                    <video controls className="w-full h-auto">
                         <source src="/GOT.mp4" type="video/mp4" />
                     </video>
                 </div>
