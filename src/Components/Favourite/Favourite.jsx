@@ -1,31 +1,33 @@
+import styles from '../Favourite/Favourite.module.css'
+
 const Favourite = () => {
     return (
-        <div id="Favourite" className="">
-            <h2 data-aos="fade-down" className="text-[52px] font-semibold mb-20 leading-normal uppercase text-center"> My Favourites</h2>
+        <div id="Favourite" className={styles.fav_section}>
+            <h2 data-aos="fade-down" className={styles.h2}>My Favourites</h2>
             <div className="mb-12">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Favourite Music</h3>
-                    <audio controls className="w-full md:w-2/3 mx-auto block">
+                <h3 className={styles.h3}>Favourite Music</h3>
+                    <audio controls className={styles.music}>
                         <source src="/public/Perfect.mp3" type="audio/mpeg"/>
                     </audio>
             </div>
             <div data-aos="fade-down" className="mb-12">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Favourite Quote</h3>
-                    <blockquote className="italic border-l-4 border-red-400 pl-4 text-gray-700 md:w-2/3 mx-auto text-[25px]">
+                <h3 className={styles.h3}>Favourite Quote</h3>
+                    <blockquote className={styles.blockquote}>
                         "The best preparation for good work tomorrow is to do good work today" – Elbert Hubbard
                     </blockquote>
             </div>
             <div data-aos="fade-down" className="mb-12">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Favourite TV-Series</h3>
-                <div className="relative max-w-md mx-auto rounded-lg overflow-hidden shadow-lg border border-gray-300">
-                    <video controls className="w-full h-auto">
+                <h3 className={styles.h3}>Favourite TV-Series</h3>
+                <div className={styles.fav_video}>
+                    <video controls className={styles.video}>
                         <source src="/GOT.mp4" type="video/mp4" />
                     </video>
                 </div>
                 <p className="text-center text-gray-600 mt-4">The "Game of Thrones" intro is one of my favorite parts of the show. As soon as the iconic music begins, I get swept up into the world of Westeros.</p>
             </div>
             <div data-aos="fade-down" className="mb-12">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Favourite Book</h3>
-                <div className="bg-gray-100 p-6 rounded-lg shadow-md md:w-2/3 mx-auto">
+                <h3 className={styles.h3}>Favourite Book</h3>
+                <div className={styles.fav_book}>
                 <p className="text-black"><strong>Title:</strong>The Count of Monte Cristo</p>
                 <p className="text-black mt-2">A book that changed my perspective on life.</p>
             </div>

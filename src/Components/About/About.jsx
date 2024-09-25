@@ -28,7 +28,7 @@ const About = () => {
                         <div className={styles.about_text_cont}>
                             <div className={styles.about_text}>
                                 <p data-aos="fade-left" class={styles.about_description}>
-                                    I am a highly motivated 21-year-old Computer Science student with a strong sense of responsibility and a passion for continuous learning. I thrive on improving my skills every day and am committed to contributing effectively to any team or project I am part of.
+                                    I am a highly motivated 21-year-old Computer Science student with a strong sense of responsibility and a passion for continuous learning.I thrive on improving my skills every day and am committed to contributing effectively to any team or project I am part of.
                                 </p>
                             </div>
                             <div class={styles.button_container}>

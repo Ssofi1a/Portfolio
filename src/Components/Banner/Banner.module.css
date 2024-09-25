@@ -13,12 +13,14 @@
     line-height: normal;
     color: #1f2937;
     text-transform: uppercase;
+    background-color: rgb(254 202 202);
 }
 
 .name {
     color: black;
+    font-style: italic;
     font-size: 24px;
-    text-decoration: underline rgb(272 165 165) double;
+    text-decoration: underline rgb(251, 211, 211) double;
 }
 
 .text {
@@ -32,6 +34,7 @@
 .profiles {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-top: 32px;
     margin-left: 25px;
     gap: 8px;
@@ -46,5 +49,5 @@
 }
 
 .links:hover {
-    background-color: #fecaca;
+    background-color: rgb(254 202 202);
 }
