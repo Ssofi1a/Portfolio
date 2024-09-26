@@ -1,7 +1,11 @@
-# urls.py in your app
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
-from .views import skills_list
+from . import views
 
 urlpatterns = [
-    path('skills/', skills_list, name='skills-list'),  # Map to your view
+    path('skills/', views.skills, name='skills'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

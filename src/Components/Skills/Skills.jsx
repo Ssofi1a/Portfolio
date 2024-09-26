@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import styles from "../Skills/Skills.module.css"
+import styles from "../Skills/Skills.module.css";
 import axios from 'axios';
-import { PiNutFill } from 'react-icons/pi';
 
 const Skills = () => {
     const [skills, setSkills] = useState(null);
@@ -10,9 +9,9 @@ const Skills = () => {
         fetchData();
     }, []);
 
-    const fetchData = () => {
-        axios.get("http://localhost:8000/skills/")
-            .then((response) => {
+    const fetchData =  () => {
+            axios.get("http://localhost:8000/skills/")
+                .then((response) => {
                 setSkills(response.data);
             })
             .catch((error) => {
@@ -23,6 +22,7 @@ const Skills = () => {
     if (!skills) {
         return <div>Loading...</div>;
     }
+
     return (
         <div data-aos="fade-down" id="Skills" className={styles.skills_section}>
             <h1 className={styles.h1}>Skills</h1>

@@ -1,8 +1,15 @@
-# views.py in your app
 from django.http import JsonResponse
 from .models import Skills
 
-def skills_list(request):
-    skills = Skills.objects.all().values()  # Get all skills
-    skills_list = list(skills)  # Convert QuerySet to list
-    return JsonResponse(skills_list, safe=False)  # Return JSON response
+def skills(request):
+    skill_instance = Skills.objects.first()
+    if skill_instance:
+        skills_data = {
+            'name1': skill_instance.name1,
+            'name2': skill_instance.name2,
+            'name3': skill_instance.name3,
+            'name4': skill_instance.name4,
+            'name5': skill_instance.name5,
+        }
+        return JsonResponse(skills_data)
+    return JsonResponse({'error': 'No data found'}, status=404)
