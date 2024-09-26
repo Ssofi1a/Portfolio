@@ -2,17 +2,46 @@ import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import {AiFillGithub} from 'react-icons/ai';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../Banner/Banner.module.css'
+import axios from 'axios';
 
 const Banner = () => {
+    // const [bannerData, setBannerData] = useState(null);
+    // const [socialLinks, setSocialLinks] = useState([]);
+
     useEffect(() => {
         AOS.init({
                 easing: 'ease-out-quart',
                 delay: 0,
                 duration: 750
-            })
-    },[])
+            });
+            // fetchBannerData();
+            // fetchSocialLinks();
+    },[]);
+    // const fetchBannerData = () => {
+    //     axios.get("http://localhost:8000/banner/")
+    //         .then((response) => {
+    //             setBannerData(response.data);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // };
+
+    // const fetchSocialLinks = () => {
+    //     axios.get("http://localhost:8000/social_media/")
+    //         .then((response) => {
+    //             setSocialLinks(response.data);
+    //         })
+    //         .catch ((error) => {
+    //             console.log(error);
+    //         });
+    // };
+
+    // if (!bannerData)
+    //     return <div>Loading...</div>
+
     return (
         <div data-aos="fade-down" className={styles.home_section}>
             <div className={styles.text_section}>

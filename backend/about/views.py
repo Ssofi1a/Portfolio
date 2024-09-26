@@ -1,9 +1,13 @@
 from django.http import JsonResponse
 from .models import About
 
-# Create your views here.
 def about(request):
-    if request.method == 'GET':
-        json = list(About.objects.values())
-        return JsonResponse(json[0], safe=False)
-    
+    about_instance = About.objects.first()
+    if about_instance:
+        about_data = {
+            'img': about_instance.img.url,
+            'desc': about_instance.desc,
+            'cv': about_instance.cv.url,
+        }
+        return JsonResponse(about_data)
+    return JsonResponse({'error': 'No data found'}, status=404)
