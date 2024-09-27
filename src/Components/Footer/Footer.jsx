@@ -1,6 +1,27 @@
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import axios from "axios";
+import { useState, useEffect } from 'react';
 
 const Footer = () => {
+    const [footer, setFooterData] = useState(null);
+
+    useEffect(() => 
+    {
+        fetchFooterData();
+    }, []);
+
+    const fetchFooterData = () => {
+        axios.get("http://localhost:8000/footer/")
+            .then((response) => {
+                setFooterData(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
+
+    if (!footer)
+        return <div>Loading...</div>
     return (
     <div>
     <footer className="bg-red-200 text-black lg:px-48 px-4 py-8">
@@ -11,27 +32,27 @@ const Footer = () => {
         <div>
             <h2 className="text-[22px] uppercase font-semibold text-red-100">Contact</h2>
             <p className="text-[16px] my-4">
-                <span className="font-semibold">Phone: </span> (+374) 96-222-872
+                <span className="font-semibold">Phone: </span> {footer.phone}
             </p>
             <p className="text-[16px] my-4">
                 <span className="font-semibold">Email: </span> 
-            <a href="mailto:sofiiabovyan@gmail.com" className="underline hover:text-black">sofiiabovyan@gmail.com</a>
+            <a href="mailto:{footer.email}" className="underline hover:text-black">{footer.email}</a>
             </p>
         </div>
         <div className="md:col-span-2">
             <div className="text-center">
             <h2 className="text-[22px] uppercase font-semibold text-red-100 mb-4">Follow Me On</h2>
             <div className="flex justify-center gap-4">
-                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href="https://github.com/Ssofi1a" target="_blank" rel="noopener noreferrer">
+                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href={footer.link1} target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-black" />
                 </a>
-                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href="https://www.linkedin.com/in/sofi-abovyan-a9557025a/" target="_blank" rel="noopener noreferrer">
+                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href={footer.link2} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-black" />
                 </a>
-                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href="https://www.instagram.com/__sofi1a__/" target="_blank" rel="noopener noreferrer">
+                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href={footer.link3} target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-black" />
                 </a>
-                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href="https://www.facebook.com/sofulikabovyan2003" target="_blank" rel="noopener noreferrer">
+                <a className="bg-red-100 hover:bg-red-300 rounded-full glow p-2 cursor-pointer" href={footer.link4} target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="text-black" />
                 </a>
             </div>

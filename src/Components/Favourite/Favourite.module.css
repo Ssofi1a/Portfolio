@@ -37,16 +37,17 @@
 
 .blockquote {
     font-style: italic;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
     text-align: center;
     border-color: rgb(55 65 81);
     color: rgb(55 65 81);
-    margin-top: 25px;
+    margin: 25px auto;
     background-color: #fecaca;
-    width: 290px;
 }
+
 
 .fav_video {
     position: relative;

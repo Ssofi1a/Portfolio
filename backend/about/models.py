@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib import admin 
 
 # Create your models here.
 class About(models.Model):
@@ -11,4 +10,3 @@ class About(models.Model):
     def __str__(self):
         return "About Me"
     
-admin.site.register(About)
