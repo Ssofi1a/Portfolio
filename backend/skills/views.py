@@ -1,5 +1,5 @@
-from django.http import JsonResponse
-from .models import Category 
+# from django.http import JsonResponse
+# from .models import Category 
 
 # def skills(request):
 #     skill_instance = Skills.objects.first()
@@ -14,5 +14,12 @@ from .models import Category
 #         return JsonResponse(skills_data)
 #     return JsonResponse({'error': 'No data found'}, status=404)
 
+# def skills(req):
+#     return JsonResponse(list(Category.objects.all().values()),safe=False)
+
+from django.http import JsonResponse
+from .models import Category
+
 def skills(req):
-    return JsonResponse( list(Category.objects.all().values()),safe=False)
+    categories = Category.objects.all().values('name', 'updated', 'skills__skill_name')
+    return JsonResponse(list(categories), safe=False)
